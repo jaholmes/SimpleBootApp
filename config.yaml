@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simpleboot
+  labels:
+    app: simpleboot
+spec:
+  containers:
+  - image: jholmes/simpleboot:latest
+    imagePullPolicy: Always
+    name: simpleboot
+    ports:
+    - containerPort: 8080
+  restartPolicy: Always
