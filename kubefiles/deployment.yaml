@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpleboot-deployment
+  labels:
+    app: simpleboot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simpleboot
+  template:
+    metadata:
+      labels:
+        app: simpleboot
+    spec:
+      containers:
+      - name: simpleboot
+        image: jholmes/simpleboot:latest
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: appd-simpleboot-config
+          - configMapRef:
+              name: appd-controller-config          
+        env:
+          - name: APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: appd-access-key
+                key: APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY

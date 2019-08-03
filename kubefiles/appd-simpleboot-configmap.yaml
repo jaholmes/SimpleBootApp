@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: appd-simpleboot-config
+  namespace: default
+data:
+  APPDYNAMICS_AGENT_TIER_NAME: "SimpleBootApp"
+  APPDYNAMICS_AGENT_APPLICATION_NAME: "SimpleBootApp"
+  # JAVA_AGENT reuse flags supported as of 4.5.8
+  APPDYNAMICS_JAVA_AGENT_REUSE_NODE_NAME: "true"
+  APPDYNAMICS_JAVA_AGENT_REUSE_NODE_NAME_PREFIX: "SimpleBootApp"

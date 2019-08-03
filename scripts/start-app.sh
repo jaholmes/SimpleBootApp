@@ -1,0 +1,1 @@
+java $JAVA_AGENT $JAVA_OPTS -jar /simpleboot/target/simplebootapp-0.0.1-SNAPSHOT.jar
