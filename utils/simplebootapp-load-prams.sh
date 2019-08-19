@@ -1,1 +1,0 @@
-python testWebapp.py 192.168.1.49:8080 "/hello?clientVersion=1.0&clientType=java&applicationName=boot" /env /beans

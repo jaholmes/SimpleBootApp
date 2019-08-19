@@ -13,3 +13,4 @@ target
 out
 build
 bin/*
+bak/*
