@@ -19,6 +19,11 @@ public class MyController {
 
 	@RequestMapping("/hello")
 	public String hello() {
+		return "hello";
+	}
+	
+	@RequestMapping("/causeError")
+    public String causeError() {
 	    String response = restTemplate.getForObject(serviceUrl, String.class);
 	    return response;
 	}
