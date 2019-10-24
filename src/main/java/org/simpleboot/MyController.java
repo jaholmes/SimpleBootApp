@@ -23,7 +23,7 @@ public class MyController {
 	}
 	
 	@RequestMapping("/causeError")
-    public String causeError() {
+        public String causeError() {
 	    String response = restTemplate.getForObject(serviceUrl, String.class);
 	    return response;
 	}
