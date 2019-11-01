@@ -9,3 +9,4 @@ data:
   # JAVA_AGENT reuse flags supported as of 4.5.8
   APPDYNAMICS_JAVA_AGENT_REUSE_NODE_NAME: "true"
   APPDYNAMICS_JAVA_AGENT_REUSE_NODE_NAME_PREFIX: "SimpleBootApp"
+  JAVA_OPTS: "-Dappdynamics.agent.nodeName=default"
